@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="排卵计算器，支持输入末次月经首日和生理周期天数，自动推算排卵日、易孕期和安全期，适合备孕参考。" />
+  <meta name="keywords" content="排卵计算器,排卵日,易孕期,安全期,末次月经,生理周期,备孕工具" />
+  <meta name="theme-color" content="#8fb8ff" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="./ovulation.html" />
+  <meta property="og:site_name" content="母婴育儿小工具站" />
+  <meta property="og:title" content="排卵计算器 - 末次月经与周期天数推算" />
+  <meta property="og:description" content="输入末次月经首日和生理周期天数，自动推算排卵日、易孕期与安全期参考。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="./ovulation.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>排卵计算器</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4573157416126348"
+     crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "排卵计算器",
+    "url": "./ovulation.html",
+    "description": "输入末次月经首日和生理周期天数，自动推算排卵日、易孕期和安全期，适合备孕参考。",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "母婴育儿小工具站",
+      "url": "./index.html"
+    },
+    "primaryImageOfPage": {
+      "@type": "ImageObject",
+      "url": "./favicon.ico"
+    },
+    "mainEntity": {
+      "@type": "SoftwareApplication",
+      "name": "排卵计算器",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "备孕计算工具，支持根据末次月经和周期天数推算排卵日、易孕期与安全期。"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "./ovulation.html",
+      "query-input": "required name=末次月经首日"
+    }
+  }
+  </script>
+  <style>
+    :root{--bg:#f6f9ff;--card:rgba(255,255,255,.94);--text:#203047;--muted:#6d7b90;--primary:#5b8def;--primary-2:#7fc8f8;--border:rgba(91,141,239,.12);--shadow:0 12px 32px rgba(54,79,128,.08);--radius:20px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(127,200,248,.18),transparent 35%),radial-gradient(circle at top right,rgba(91,141,239,.14),transparent 30%),var(--bg);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(1120px,calc(100% - 32px));margin:0 auto}
+    header{padding:18px 0 10px}
+    .nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0 16px}
+    .brand{display:inline-flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em}
+    .brand-mark{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;box-shadow:0 10px 22px rgba(91,141,239,.22)}
+    .nav-links{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+    .nav-links a{padding:9px 12px;border-radius:999px;color:#466089;font-size:14px;background:rgba(255,255,255,.68);border:1px solid rgba(91,141,239,.08)}
+    .hero{background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(255,255,255,.72));border:1px solid var(--border);box-shadow:var(--shadow);border-radius:28px;padding:28px 22px;backdrop-filter:blur(12px)}
+    .badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--primary);background:rgba(91,141,239,.08);border:1px solid rgba(91,141,239,.12);padding:7px 12px;border-radius:999px;margin-bottom:14px}
+    h1{margin:0 0 12px;font-size:clamp(30px,5vw,46px);line-height:1.12;letter-spacing:-.02em}
+    .lead{margin:0;color:var(--muted);font-size:15px;max-width:760px}
+    main{padding:18px 0 44px}
+    .layout{display:grid;grid-template-columns:340px minmax(0,1fr);gap:18px;align-items:start}
+    .panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .panel-hd{padding:18px 18px 0}
+    .panel-bd{padding:18px}
+    h2{margin:0 0 12px;font-size:18px}
+    label{display:block;margin-bottom:8px;font-size:14px;font-weight:600}
+    input{width:100%;border:1px solid rgba(91,141,239,.18);border-radius:14px;padding:13px 14px;font-size:15px;background:#fff;color:var(--text);outline:none}
+    input:focus{border-color:rgba(91,141,239,.5);box-shadow:0 0 0 4px rgba(91,141,239,.12)}
+    .tip{display:flex;gap:10px;padding:12px 14px;border-radius:16px;background:rgba(91,141,239,.06);color:#35507f;font-size:13px;margin-top:10px}
+    .summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}
+    .stat{padding:14px;border-radius:16px;background:linear-gradient(180deg,rgba(91,141,239,.06),rgba(127,200,248,.08));border:1px solid rgba(91,141,239,.1)}
+    .stat .k{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}
+    .stat .v{font-size:18px;font-weight:700}
+    .blocks{display:grid;gap:14px}
+    .block{padding:16px;border-radius:18px;background:#fff;border:1px solid rgba(91,141,239,.1)}
+    .block h3{margin:0 0 10px;font-size:16px}
+    .dates{display:grid;gap:10px}
+    .date-row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:11px 12px;border-radius:14px;background:rgba(91,141,239,.05)}
+    .date-row span{font-size:14px}
+    .date-row strong{font-size:14px;color:#2f4b7c}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{display:inline-flex;padding:6px 10px;border-radius:999px;background:rgba(91,141,239,.06);border:1px solid rgba(91,141,239,.1);font-size:12px;color:#466089;font-weight:700}
+    .calendar{display:grid;gap:12px}
+    .range-box{padding:14px 16px;border-radius:16px;background:linear-gradient(180deg,rgba(91,141,239,.06),rgba(127,200,248,.08));border:1px solid rgba(91,141,239,.1)}
+    .range-box strong{display:block;margin-bottom:4px;font-size:15px}
+    .range-box p{margin:0;color:var(--muted);font-size:14px}
+    .explain{padding:14px 16px;border-radius:16px;background:rgba(31,157,99,.06);border:1px solid rgba(31,157,99,.12);color:#2d6e50;font-size:13px}
+    .disclaimer{margin-top:14px;padding:14px 16px;border-radius:16px;background:rgba(209,91,91,.06);border:1px solid rgba(209,91,91,.12);color:#7f3e3e;font-size:13px}
+    .footer-nav{position:sticky;bottom:0;z-index:20;padding:10px 0 calc(10px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(246,249,255,.2),rgba(246,249,255,.94) 24%,rgba(246,249,255,.98));backdrop-filter:blur(18px);border-top:1px solid rgba(91,141,239,.10);box-shadow:0 -10px 24px rgba(54,79,128,.05)}
+    .footer-nav-inner{width:min(1120px,calc(100% - 32px));margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+    .footer-nav a{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 10px;border-radius:18px;color:#466089;font-size:13px;font-weight:700;background:rgba(255,255,255,.86);border:1px solid rgba(91,141,239,.10);box-shadow:0 10px 20px rgba(54,79,128,.05);transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+    .footer-nav a:hover{transform:translateY(-2px);box-shadow:0 14px 24px rgba(54,79,128,.08);background:#fff}
+    .footer-nav a.active{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-color:transparent;box-shadow:0 12px 24px rgba(91,141,239,.18)}
+    .nav-ic{font-size:18px;line-height:1}.nav-txt{font-size:12px;line-height:1}.nav-sub{font-size:10px;opacity:.8}.footer-nav a.active .nav-sub{opacity:.92}
+    footer{padding:10px 0 18px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:960px){.layout,.summary{grid-template-columns:1fr}}
+    @media (max-width:640px){.container,.footer-nav-inner{width:min(100% - 20px,1120px)}header{padding-top:14px}.hero{padding:22px 16px;border-radius:22px}.panel-bd{padding:16px}.footer-nav-inner{gap:8px}.footer-nav a{padding:10px 6px;border-radius:16px}.nav-ic{font-size:17px}.nav-txt{font-size:11px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav class="nav" aria-label="顶部导航">
+        <a class="brand" href="index.html" aria-label="返回首页"><span class="brand-mark">婴</span><span>母婴育儿小工具站</span></a>
+        <div class="nav-links">
+          <a href="index.html">首页</a>
+          <a href="food.html">辅食工具</a>
+          <a href="growth.html">身高体重</a>
+          <a href="due-date.html">预产期测算</a>
+        </div>
+      </nav>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="badge">备孕专区 · 排卵日推算</div>
+        <h1 id="page-title">排卵计算器</h1>
+        <p class="lead">输入末次月经首日和生理周期天数，自动推算排卵日、易孕期和安全期参考，帮助备孕家庭更方便地安排计划。</p>
+      </section>
+    </div>
+  </header>
+  <main class="container">
+    <div class="layout">
+      <section class="panel" aria-labelledby="form-title">
+        <div class="panel-hd"><h2 id="form-title">填写信息</h2></div>
+        <div class="panel-bd">
+          <div class="form-group" style="margin-bottom:14px;">
+            <label for="lmpDate">末次月经首日</label>
+            <input id="lmpDate" type="date" />
+          </div>
+          <div class="form-group">
+            <label for="cycleDays">生理周期天数</label>
+            <input id="cycleDays" type="number" min="21" max="45" step="1" value="28" />
+          </div>
+          <div class="tip"><div>📌</div><div><strong>默认参考</strong>排卵日按“下次月经前约14天”推算，易孕期按排卵日前5天至后1天计算。</div></div>
+          <div class="tip"><div>🩺</div><div><strong>仅供参考</strong>排卵受周期波动、压力、作息等影响，实际情况可能略有差异。</div></div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="result-title">
+        <div class="panel-hd"><h2 id="result-title">计算结果</h2></div>
+        <div class="panel-bd">
+          <div class="summary" id="summary" hidden>
+            <div class="stat"><span class="k">排卵日</span><span class="v" id="ovulationText">-</span></div>
+            <div class="stat"><span class="k">易孕期</span><span class="v" id="fertileText">-</span></div>
+            <div class="stat"><span class="k">安全期</span><span class="v" id="safeText">-</span></div>
+          </div>
+
+          <div class="blocks">
+            <div class="block">
+              <h3>关键日期</h3>
+              <div class="dates">
+                <div class="date-row"><span>末次月经首日</span><strong id="lmpText">-</strong></div>
+                <div class="date-row"><span>推算排卵日</span><strong id="ovulationDateText">-</strong></div>
+                <div class="date-row"><span>易孕期开始</span><strong id="fertileStartText">-</strong></div>
+                <div class="date-row"><span>易孕期结束</span><strong id="fertileEndText">-</strong></div>
+              </div>
+            </div>
+
+            <div class="block">
+              <h3>周期参考</h3>
+              <div class="calendar">
+                <div class="range-box">
+                  <strong>安全期参考</strong>
+                  <p id="safeExplain">-</p>
+                </div>
+                <div class="chips" id="chips"></div>
+              </div>
+            </div>
+
+            <div class="block">
+              <h3>简单科普</h3>
+              <div class="explain" id="explainText">-</div>
+            </div>
+          </div>
+
+          <p class="disclaimer">免责声明：本工具仅用于备孕与日程参考，不构成医学诊断或避孕/受孕保证；如有月经不规律、内分泌问题或备孕困难，请咨询医生。</p>
+
+          <div class="block" style="margin-top:14px;">
+            <h3>常见问题</h3>
+            <div class="dates">
+              <div class="date-row"><span>排卵日一定准确吗？</span><strong>不是，只能作为参考</strong></div>
+              <div class="date-row"><span>周期不规律怎么办？</span><strong>建议结合试纸/基础体温</strong></div>
+              <div class="date-row"><span>易孕期怎么算？</span><strong>通常按排卵日前5天到后1天</strong></div>
+              <div class="date-row"><span>安全期可以完全避孕吗？</span><strong>不建议仅凭安全期判断</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <nav class="footer-nav" aria-label="底部导航">
+    <div class="footer-nav-inner">
+      <a href="index.html"><span class="nav-ic">🏠</span><span class="nav-txt">首页</span><span class="nav-sub">Home</span></a>
+      <a href="food.html"><span class="nav-ic">🥣</span><span class="nav-txt">辅食</span><span class="nav-sub">Food</span></a>
+      <a href="growth.html"><span class="nav-ic">📈</span><span class="nav-txt">身高</span><span class="nav-sub">Growth</span></a>
+      <a class="active" href="ovulation.html"><span class="nav-ic">🧭</span><span class="nav-txt">备孕</span><span class="nav-sub">Ovulation</span></a>
+      <a href="vaccine.html"><span class="nav-ic">💉</span><span class="nav-txt">疫苗</span><span class="nav-sub">Vaccine</span></a>
+    </div>
+  </nav>
+
+  <footer><div class="container">© 2026 母婴育儿小工具站 · 简洁、安全，体验友好</div></footer>
+
+  <script>
+    const lmpDate=document.getElementById('lmpDate');
+    const cycleDays=document.getElementById('cycleDays');
+    const summary=document.getElementById('summary');
+    const ovulationText=document.getElementById('ovulationText');
+    const fertileText=document.getElementById('fertileText');
+    const safeText=document.getElementById('safeText');
+    const lmpText=document.getElementById('lmpText');
+    const ovulationDateText=document.getElementById('ovulationDateText');
+    const fertileStartText=document.getElementById('fertileStartText');
+    const fertileEndText=document.getElementById('fertileEndText');
+    const safeExplain=document.getElementById('safeExplain');
+    const chips=document.getElementById('chips');
+    const explainText=document.getElementById('explainText');
+
+    const fmt=d=>`${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日`;
+    const addDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
+    const normalize=d=>{const x=new Date(d);x.setHours(0,0,0,0);return x};
+    const rangeText=(start,end)=>`${fmt(start)} 至 ${fmt(end)}`;
+
+    function render(){
+      const dateValue=lmpDate.value;
+      const cycle=Math.max(21,Math.min(45,Number(cycleDays.value)||28));
+      if(!dateValue){
+        summary.hidden=true;
+        ovulationText.textContent='-';
+        fertileText.textContent='-';
+        safeText.textContent='-';
+        lmpText.textContent='-';
+        ovulationDateText.textContent='-';
+        fertileStartText.textContent='-';
+        fertileEndText.textContent='-';
+        safeExplain.textContent='请选择末次月经首日后生成结果。';
+        chips.innerHTML='';
+        explainText.textContent='排卵通常发生在下次月经来潮前约14天，易孕期一般覆盖排卵日前5天到排卵后1天。';
+        return;
+      }
+
+      const lmp=normalize(new Date(dateValue+'T00:00:00'));
+      const ovulation=addDays(lmp,cycle-14);
+      const fertileStart=addDays(ovulation,-5);
+      const fertileEnd=addDays(ovulation,1);
+      const safeBefore=addDays(fertileStart,-1);
+      const safeAfter=addDays(fertileEnd,7);
+
+      summary.hidden=false;
+      lmpText.textContent=fmt(lmp);
+      ovulationDateText.textContent=fmt(ovulation);
+      fertileStartText.textContent=fmt(fertileStart);
+      fertileEndText.textContent=fmt(fertileEnd);
+      ovulationText.textContent=fmt(ovulation);
+      fertileText.textContent=rangeText(fertileStart,fertileEnd);
+      safeText.textContent=`${fmt(lmp)} 起至 ${fmt(safeBefore)}，以及 ${fmt(safeAfter)} 之后`;
+      safeExplain.textContent=`安全期并非绝对安全，通常可粗略理解为“月经结束后早期”和“排卵期结束后几天”风险相对较低，但周期波动会影响结果。`;
+      chips.innerHTML=[
+        `周期 ${cycle} 天`,
+        `黄体期约 14 天`,
+        `易孕期 ${fmt(fertileStart)}-${fmt(fertileEnd)}`,
+        `排卵日 ${fmt(ovulation)}`
+      ].map(t=>`<span class="chip">${t}</span>`).join('');
+      explainText.textContent=`当前按生理周期 ${cycle} 天推算，排卵日约在周期第 ${cycle-14} 天。若周期不规则、近期压力大、作息变化明显，实际排卵时间可能前后波动，请结合基础体温、排卵试纸或医生建议综合判断。`;
+    }
+
+    const today=new Date();
+    today.setDate(today.getDate()-7);
+    lmpDate.value=`${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
+    render();
+    lmpDate.addEventListener('input',render);
+    cycleDays.addEventListener('input',render);
+    cycleDays.addEventListener('change',render);
+  </script>
+</body>
+</html>
