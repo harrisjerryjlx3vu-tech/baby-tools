@@ -1,0 +1,18 @@
+{
+  "boy": [
+    { "age": "1岁", "heightRange": [71.2, 82.0], "weightRange": [7.8, 12.0], "heightMedian": 76.6, "weightMedian": 9.9, "tip": "生长速度较快" },
+    { "age": "2岁", "heightRange": [82.3, 95.6], "weightRange": [9.7, 15.3], "heightMedian": 88.9, "weightMedian": 12.5, "tip": "注意营养均衡" },
+    { "age": "3岁", "heightRange": [90.7, 104.1], "weightRange": [11.4, 18.0], "heightMedian": 97.4, "weightMedian": 14.7, "tip": "活动量增加" },
+    { "age": "4岁", "heightRange": [98.7, 113.7], "weightRange": [13.0, 21.5], "heightMedian": 106.2, "weightMedian": 17.1, "tip": "定期体检" },
+    { "age": "5岁", "heightRange": [105.3, 121.0], "weightRange": [14.7, 24.9], "heightMedian": 113.2, "weightMedian": 19.8, "tip": "保持睡眠充足" },
+    { "age": "6岁", "heightRange": [111.8, 128.4], "weightRange": [16.2, 28.9], "heightMedian": 120.1, "weightMedian": 22.2, "tip": "入学前监测" }
+  ],
+  "girl": [
+    { "age": "1岁", "heightRange": [69.2, 80.8], "weightRange": [7.2, 11.3], "heightMedian": 75.0, "weightMedian": 9.2, "tip": "生长速度较快" },
+    { "age": "2岁", "heightRange": [81.5, 94.6], "weightRange": [9.0, 14.8], "heightMedian": 88.0, "weightMedian": 11.9, "tip": "注意营养均衡" },
+    { "age": "3岁", "heightRange": [90.2, 103.3], "weightRange": [10.8, 17.6], "heightMedian": 96.8, "weightMedian": 14.1, "tip": "活动量增加" },
+    { "age": "4岁", "heightRange": [98.5, 112.9], "weightRange": [12.3, 21.0], "heightMedian": 105.7, "weightMedian": 16.5, "tip": "定期体检" },
+    { "age": "5岁", "heightRange": [104.9, 120.6], "weightRange": [13.7, 24.1], "heightMedian": 112.8, "weightMedian": 19.0, "tip": "保持睡眠充足" },
+    { "age": "6岁", "heightRange": [111.0, 127.8], "weightRange": [15.4, 28.0], "heightMedian": 119.4, "weightMedian": 21.6, "tip": "入学前监测" }
+  ]
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="母婴育儿小工具站，集合疫苗接种、预产期孕周、辅食添加和儿童身高体重标准对照，简洁清爽，移动端优先。" />
+  <meta name="keywords" content="母婴工具,育儿工具,宝宝疫苗,预产期计算器,孕周计算,辅食添加时间表,儿童身高体重标准,新手爸妈" />
+  <meta name="theme-color" content="#8fb8ff" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="./index.html" />
+  <meta property="og:site_name" content="母婴育儿小工具站" />
+  <meta property="og:title" content="母婴育儿小工具站 - 纯净实用的母婴育儿工具合集" />
+  <meta property="og:description" content="免费、免登录的母婴育儿工具站，提供疫苗、孕周、辅食和成长发育参考工具。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="./index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>母婴育儿小工具站</title>
+  <style>
+    :root { --bg:#f6f9ff; --card:rgba(255,255,255,.92); --text:#203047; --muted:#6d7b90; --primary:#5b8def; --primary-2:#7fc8f8; --border:rgba(91,141,239,.12); --shadow:0 12px 32px rgba(54,79,128,.08); --radius:20px; }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(127,200,248,.18),transparent 35%),radial-gradient(circle at top right,rgba(91,141,239,.14),transparent 30%),var(--bg);line-height:1.6} a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 32px));margin:0 auto}header{padding:16px 0 10px}.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0 16px}.brand{display:inline-flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.02em}.brand-mark{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;box-shadow:0 10px 22px rgba(91,141,239,.22)}.nav-links{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.nav-links a{padding:9px 12px;border-radius:999px;color:#466089;font-size:14px;background:rgba(255,255,255,.68);border:1px solid rgba(91,141,239,.08)}.hero{background:linear-gradient(135deg,rgba(255,255,255,.9),rgba(255,255,255,.72));border:1px solid var(--border);box-shadow:var(--shadow);border-radius:28px;padding:28px 22px;backdrop-filter:blur(12px)}.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:18px;align-items:center}.badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--primary);background:rgba(91,141,239,.08);border:1px solid rgba(91,141,239,.12);padding:7px 12px;border-radius:999px;margin-bottom:14px}h1{margin:0 0 12px;font-size:clamp(30px,5vw,46px);line-height:1.12;letter-spacing:-.02em}.lead{margin:0 0 18px;color:var(--muted);font-size:15px;max-width:720px}.hero-actions{display:flex;flex-wrap:wrap;gap:10px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:14px;font-weight:700;border:1px solid transparent}.btn.primary{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;box-shadow:0 12px 24px rgba(91,141,239,.22)}.btn.ghost{background:rgba(255,255,255,.78);border-color:rgba(91,141,239,.12);color:#3f5f99}.hero-card{padding:18px;border-radius:22px;background:linear-gradient(180deg,rgba(91,141,239,.08),rgba(127,200,248,.12));border:1px solid rgba(91,141,239,.12)}.hero-card h2{margin:0 0 10px;font-size:18px}.hero-card ul{margin:0;padding-left:18px;color:#466089}.hero-card li{margin:8px 0}main{padding:18px 0 44px}.section-title{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:18px 2px 14px}.section-title h2{margin:0;font-size:20px}.section-title p{margin:0;color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.card{display:flex;flex-direction:column;min-height:220px;padding:20px;border-radius:var(--radius);background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .2s ease,box-shadow .2s ease}.card:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(54,79,128,.12)}.icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:24px;background:linear-gradient(135deg,rgba(91,141,239,.16),rgba(127,200,248,.2));margin-bottom:16px}.card h3{margin:0 0 10px;font-size:18px}.card p{margin:0 0 18px;color:var(--muted);font-size:14px}.card .meta{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px}.pill{font-size:12px;color:#3f5f99;background:rgba(91,141,239,.08);border-radius:999px;padding:6px 10px}.action{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:18px;padding:12px 16px;border-radius:14px;background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;font-weight:600;box-shadow:0 12px 24px rgba(91,141,239,.22)}.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.info-card,.faq-card,.contact-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:20px}.info-card h3,.faq-card h3,.contact-card h3{margin:0 0 10px;font-size:18px}.info-card p,.faq-card p,.contact-card p{margin:0;color:var(--muted);font-size:14px}.faq-list{display:grid;gap:12px}.faq-item{padding:14px 16px;border-radius:16px;background:rgba(91,141,239,.05);border:1px solid rgba(91,141,239,.08)}.faq-item strong{display:block;margin-bottom:6px;font-size:15px}.faq-item span{color:var(--muted);font-size:14px}.section-wrap{margin-top:28px}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr 1fr;gap:16px;padding:0 0 18px;text-align:left}.footer-note{padding-top:14px;border-top:1px solid rgba(91,141,239,.12);text-align:center}.section-anchor{scroll-margin-top:16px}footer{padding:10px 0 30px;color:var(--muted);font-size:13px;text-align:center}@media (max-width:980px){.hero-grid,.info-grid,.grid,.footer-grid{grid-template-columns:1fr}.nav{align-items:start;flex-direction:column}.nav-links{justify-content:flex-start}}@media (max-width:640px){.container{width:min(100% - 20px,1120px)}.hero{padding:22px 16px;border-radius:22px}.section-title{flex-direction:column;align-items:start}.card{min-height:auto}.nav-links a{font-size:13px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav class="nav" aria-label="顶部导航">
+        <a class="brand" href="index.html" aria-label="返回首页"><span class="brand-mark">婴</span><span>母婴育儿小工具站</span></a>
+        <div class="nav-links"><a href="#tools">工具中心</a><a href="#intro">产品说明</a><a href="#faq">FAQ</a></div>
+      </nav>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div>
+            <div class="badge">简洁清爽 · 免登录 · 移动端优先</div>
+            <h1 id="hero-title">母婴育儿小工具站</h1>
+            <p class="lead">为孕产家庭和新手爸妈提供简洁、可靠、好用的日常参考工具。页面仅使用纯 HTML + CSS + JS 实现，风格统一，适合移动端快速使用。</p>
+            <div class="hero-actions"><a class="btn primary" href="#tools">开始使用</a><a class="btn ghost" href="vaccine.html">直接体验疫苗工具</a></div>
+          </div>
+          <aside class="hero-card" aria-label="站点亮点"><h2>产品亮点</h2><ul><li>打开即用，尽量减少不必要的干扰。</li><li>移动端优先设计，卡片与表格均适合手机查看。</li><li>统一视觉风格，适合做成可上线的工具集合页。</li></ul></aside>
+        </div>
+      </section>
+    </div>
+  </header>
+  <main class="container">
+    <section id="tools" class="section-anchor"><div class="section-title"><div><h2>常用工具</h2><p>点击进入对应工具页，随时查询。</p></div></div><div class="grid" aria-label="母婴育儿工具列表"><article class="card"><div class="icon">💉</div><h3>宝宝疫苗接种时间表计算器</h3><p>输入出生日期，自动推算一类、二类疫苗的理论接种时间，方便做日程参考。</p><div class="meta"><span class="pill">疫苗</span><span class="pill">日期推算</span><span class="pill">一类/二类</span></div><a class="action" href="vaccine.html">立即使用</a></article><article class="card"><div class="icon">🤰</div><h3>预产期孕周计算器</h3><p>根据末次月经或预产期快速计算孕周、孕龄和关键时间点，适合孕期管理。</p><div class="meta"><span class="pill">预产期</span><span class="pill">孕周</span><span class="pill">孕期管理</span></div><a class="action" href="gestation.html">立即使用</a></article><article class="card"><div class="icon">🥣</div><h3>宝宝辅食添加时间表</h3><p>查看不同月龄适合添加的辅食类型与建议节奏，帮助宝宝平稳开启辅食之旅。</p><div class="meta"><span class="pill">辅食</span><span class="pill">月龄</span><span class="pill">成长建议</span></div><a class="action" href="food.html">立即使用</a></article><article class="card"><div class="icon">📏</div><h3>儿童身高体重标准对照表</h3><p>快速了解儿童身高体重标准参考范围，辅助家长观察孩子的生长发育情况。</p><div class="meta"><span class="pill">生长发育</span><span class="pill">身高</span><span class="pill">体重</span></div><a class="action" href="growth.html">立即使用</a></article></div></section>
+    <section id="intro" class="section-wrap section-anchor"><div class="section-title"><div><h2>工具说明</h2><p>了解本站设计理念与使用方式。</p></div></div><div class="info-grid"><article class="info-card"><h3>为什么做这个站</h3><p>面向孕期、育儿、宝宝生长发育等高频需求，提供打开即用的小工具，避免跳转复杂流程。</p></article><article class="info-card"><h3>如何使用</h3><p>直接选择对应工具页输入信息即可，结果将即时展示，适合日常查询与快速记录。</p></article><article class="info-card"><h3>数据说明</h3><p>所有工具均为日期推算或常见参考数据，不替代医院、医生及官方机构的最终建议。</p></article></div></section>
+    <section id="faq" class="section-wrap section-anchor"><div class="section-title"><div><h2>FAQ</h2><p>常见问题快速说明。</p></div></div><div class="faq-card"><div class="faq-list"><div class="faq-item"><strong>这个网站需要登录吗？</strong><span>不需要，打开即用，适合移动端快速查询。</span></div><div class="faq-item"><strong>会不会有广告或弹窗？</strong><span>不会，站点保持纯净简洁，避免干扰使用体验。</span></div><div class="faq-item"><strong>疫苗时间表准确吗？</strong><span>为理论日期参考，实际接种请以当地社区医院和医生建议为准。</span></div><div class="faq-item"><strong>后续还会增加新工具吗？</strong><span>会，当前已规划预产期孕周、辅食添加、儿童身高体重等模块的进一步完善。</span></div></div></div></section>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="font-size:14px;font-weight:800;margin-bottom:8px;color:var(--text);">母婴育儿小工具站</div>
+          <div style="font-size:13px;color:var(--muted);">专注于母婴育儿日常查询的轻量工具集合，设计简洁，使用便捷。</div>
+        </div>
+        <div>
+          <div style="font-size:14px;font-weight:800;margin-bottom:8px;color:var(--text);">核心工具</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.9;">疫苗接种 · 预产期孕周 · 辅食添加 · 身高体重标准</div>
+        </div>
+        <div>
+          <div style="font-size:14px;font-weight:800;margin-bottom:8px;color:var(--text);">使用说明</div>
+          <div style="font-size:13px;color:var(--muted);line-height:1.9;">免登录 · 移动端优先 · 仅作参考，不替代医疗建议</div>
+        </div>
+      </div>
+      <div class="footer-note">© 2026 母婴育儿小工具站 · 简洁、安全，体验友好</div>
+      <div class="section-wrap" style="margin-top:18px;">
+        <div class="info-grid" style="grid-template-columns:1fr 1fr;">
+          <div class="contact-card">
+            <h3>联系我们</h3>
+            <p>如需反馈内容建议、页面体验优化或功能更新需求，可通过站点后续接入的邮箱或表单联系维护者。当前站点为纯静态版本，暂不开放账号体系。</p>
+          </div>
+          <div class="contact-card">
+            <h3>免责声明</h3>
+            <p>本站内容仅供育儿与日程规划参考，不构成医疗诊断、治疗建议或官方接种承诺。涉及健康问题，请以专业医生、医院及当地卫生部门意见为准。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="宝宝疫苗接种时间表计算器，输入出生日期，自动生成一类和二类疫苗理论接种日期参考。" />
+  <meta name="keywords" content="宝宝疫苗,接种时间表,一类疫苗,二类疫苗,出生日期计算器,免疫规划" />
+  <meta name="theme-color" content="#8fb8ff" />
+  <link rel="canonical" href="./vaccine.html" />
+  <meta property="og:site_name" content="母婴育儿小工具站" />
+  <meta property="og:title" content="宝宝疫苗接种时间表计算器" />
+  <meta property="og:description" content="输入出生日期，自动生成宝宝疫苗理论接种时间表，支持一类、二类疫苗参考。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="./vaccine.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>宝宝疫苗接种时间表计算器</title>
+  <style>
+    :root{--bg:#f6f9ff;--card:rgba(255,255,255,.94);--text:#203047;--muted:#6d7b90;--primary:#5b8def;--primary-2:#7fc8f8;--success:#1f9d63;--warning:#c58b18;--danger:#d15b5b;--border:rgba(91,141,239,.12);--shadow:0 12px 32px rgba(54,79,128,.08);--radius:20px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(127,200,248,.18),transparent 35%),radial-gradient(circle at top right,rgba(91,141,239,.14),transparent 30%),var(--bg);line-height:1.6}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 32px));margin:0 auto}header{padding:22px 0 10px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.back{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.85);box-shadow:var(--shadow)}.hero{background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(255,255,255,.74));border:1px solid var(--border);box-shadow:var(--shadow);border-radius:28px;padding:26px 22px;backdrop-filter:blur(12px)}.badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--primary);background:rgba(91,141,239,.08);border:1px solid rgba(91,141,239,.12);padding:7px 12px;border-radius:999px;margin-bottom:14px}h1{margin:0 0 10px;font-size:clamp(26px,5vw,38px);line-height:1.15;letter-spacing:-.02em}.lead{margin:0;color:var(--muted);font-size:15px;max-width:780px}main{padding:16px 0 56px}.layout{display:grid;grid-template-columns:340px minmax(0,1fr);gap:18px;align-items:start}.panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}.panel-hd{padding:18px 18px 0}.panel-bd{padding:18px}h2{margin:0 0 12px;font-size:18px}label{display:block;margin-bottom:8px;font-size:14px;font-weight:600}input,select{width:100%;border:1px solid rgba(91,141,239,.18);border-radius:14px;padding:13px 14px;font-size:15px;background:#fff;color:var(--text);outline:none}input:focus,select:focus{border-color:rgba(91,141,239,.5);box-shadow:0 0 0 4px rgba(91,141,239,.12)}.radio-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.chip{display:flex;align-items:center;justify-content:center;padding:12px;border-radius:14px;border:1px solid rgba(91,141,239,.16);background:#fff;font-weight:700;cursor:pointer}.chip.active{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-color:transparent}.tip{display:flex;gap:10px;padding:12px 14px;border-radius:16px;background:rgba(91,141,239,.06);color:#35507f;font-size:13px;margin-top:10px}.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}.stat{padding:14px;border-radius:16px;background:linear-gradient(180deg,rgba(91,141,239,.06),rgba(127,200,248,.08));border:1px solid rgba(91,141,239,.1)}.stat .k{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}.stat .v{font-size:18px;font-weight:700}.table-wrap{overflow-x:auto}table{width:100%;min-width:760px;border-collapse:collapse}thead th{text-align:left;font-size:13px;color:#496189;padding:14px 12px;background:rgba(91,141,239,.06);border-bottom:1px solid var(--border)}tbody td{padding:14px 12px;border-bottom:1px solid rgba(91,141,239,.08);font-size:14px}.tag{display:inline-flex;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap}.type1{background:rgba(31,157,99,.1);color:var(--success)}.type2{background:rgba(197,139,24,.12);color:var(--warning)}.status-due{background:rgba(91,141,239,.1);color:var(--primary)}.status-upcoming{background:rgba(31,157,99,.1);color:var(--success)}.status-past{background:rgba(209,91,91,.1);color:var(--danger)}.empty{padding:26px 14px;text-align:center;color:var(--muted);font-size:14px}.disclaimer{margin-top:16px;padding:14px 16px;border-radius:16px;background:rgba(209,91,91,.06);border:1px solid rgba(209,91,91,.12);color:#7f3e3e;font-size:13px}.footer-nav{position:sticky;bottom:0;z-index:20;padding:10px 0 calc(10px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(246,249,255,.2),rgba(246,249,255,.94) 24%,rgba(246,249,255,.98));backdrop-filter:blur(18px);border-top:1px solid rgba(91,141,239,.10);box-shadow:0 -10px 24px rgba(54,79,128,.05)}.footer-nav-inner{width:min(1120px,calc(100% - 32px));margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.footer-nav a{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 10px;border-radius:18px;color:#466089;font-size:13px;font-weight:700;background:rgba(255,255,255,.86);border:1px solid rgba(91,141,239,.10);box-shadow:0 10px 20px rgba(54,79,128,.05);transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.footer-nav a:hover{transform:translateY(-2px);box-shadow:0 14px 24px rgba(54,79,128,.08);background:#fff}.footer-nav a.active{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-color:transparent;box-shadow:0 12px 24px rgba(91,141,239,.18)}.nav-ic{font-size:18px;line-height:1}.nav-txt{font-size:12px;line-height:1}.nav-sub{font-size:10px;opacity:.8}.footer-nav a.active .nav-sub{opacity:.92}footer{padding:10px 0 18px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:960px){.layout,.summary{grid-template-columns:1fr}}@media (max-width:640px){.container,.footer-nav-inner{width:min(100% - 20px,1120px)}header{padding-top:14px}.hero{padding:22px 16px;border-radius:22px}.panel-bd{padding:16px}.footer-nav-inner{gap:8px}.footer-nav a{padding:10px 6px;border-radius:16px}.nav-ic{font-size:17px}.nav-txt{font-size:11px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="topbar"><a class="back" href="index.html">← 返回首页</a></div>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="badge">疫苗接种时间表 · 理论日期推算</div>
+        <h1 id="page-title">宝宝疫苗接种时间表计算器</h1>
+        <p class="lead">输入宝宝出生日期后，系统将按儿童免疫程序数据自动推算理论接种日期。页面仅作日程参考，方便家长预留接种时间。</p>
+      </section>
+    </div>
+  </header>
+  <main class="container">
+    <div class="layout">
+      <section class="panel" aria-labelledby="form-title">
+        <div class="panel-hd"><h2 id="form-title">填写出生日期</h2></div>
+        <div class="panel-bd">
+          <div class="form-group"><label for="birthDate">宝宝出生日期</label><input id="birthDate" type="date" /></div>
+          <div class="tips">
+            <div class="tip"><div>📅</div><div><strong>自动推算</strong>输入日期后将立即生成理论接种时间表。</div></div>
+            <div class="tip"><div>🏥</div><div><strong>以实际接种为准</strong>不同地区、门诊及孩子健康状态可能会影响接种安排。</div></div>
+            <div class="tip"><div>🧾</div><div><strong>适合做提醒</strong>可用于家长提前准备预约与出行安排。</div></div>
+          </div>
+        </div>
+      </section>
+      <section class="panel" aria-labelledby="result-title">
+        <div class="panel-hd"><h2 id="result-title">疫苗接种时间表</h2></div>
+        <div class="panel-bd">
+          <div class="summary" id="summary" hidden>
+            <div class="stat"><span class="k">当前日期</span><span class="v" id="todayText">-</span></div>
+            <div class="stat"><span class="k">宝宝月龄</span><span class="v" id="ageText">-</span></div>
+            <div class="stat"><span class="k">首个待接种</span><span class="v" id="nextText">-</span></div>
+            <div class="stat"><span class="k">提醒</span><span class="v" id="remindText">-</span></div>
+          </div>
+          <div class="table-wrap">
+            <table aria-describedby="table-desc">
+              <thead><tr><th>月龄</th><th>疫苗名称</th><th>类型</th><th>理论日期</th><th>状态</th></tr></thead>
+              <tbody id="tableBody"><tr><td colspan="5"><div class="empty">请选择宝宝出生日期后生成时间表。</div></td></tr></tbody>
+            </table>
+          </div>
+          <p id="table-desc" class="disclaimer">免责声明：本工具仅做日期推算参考，不构成医疗建议，实际以社区医院为准。</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <nav class="footer-nav" aria-label="底部导航">
+    <div class="footer-nav-inner">
+      <a href="index.html"><span class="nav-ic">🏠</span><span class="nav-txt">首页</span><span class="nav-sub">Home</span></a>
+      <a class="active" href="vaccine.html"><span class="nav-ic">💉</span><span class="nav-txt">疫苗</span><span class="nav-sub">Vaccine</span></a>
+      <a href="gestation.html"><span class="nav-ic">🤰</span><span class="nav-txt">孕周</span><span class="nav-sub">Week</span></a>
+      <a href="food.html"><span class="nav-ic">🥣</span><span class="nav-txt">辅食</span><span class="nav-sub">Food</span></a>
+      <a href="growth.html"><span class="nav-ic">📈</span><span class="nav-txt">成长</span><span class="nav-sub">Growth</span></a>
+    </div>
+  </nav>
+  <footer><div class="container">© 2026 母婴育儿小工具站 · 简洁、安全，体验友好</div></footer>
+  <script>
+    const birthInput=document.getElementById('birthDate'),tableBody=document.getElementById('tableBody'),summary=document.getElementById('summary'),todayText=document.getElementById('todayText'),ageText=document.getElementById('ageText'),nextText=document.getElementById('nextText'),remindText=document.getElementById('remindText');
+    const formatDate=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;const formatDisplay=d=>`${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日`;const addDays=(d,n)=>{const r=new Date(d);r.setDate(r.getDate()+n);return r};const getAgeMonths=(birth,now)=>{let months=(now.getFullYear()-birth.getFullYear())*12+(now.getMonth()-birth.getMonth());if(now.getDate()<birth.getDate()) months-=1;return Math.max(months,0)};const statusForDate=(target,today)=>{const diff=Math.ceil((target-today)/86400000);if(diff<0) return {text:'已过理论日期',cls:'status-past'};if(diff===0) return {text:'今天',cls:'status-due'};return {text:`还有${diff}天`,cls:'status-upcoming'}};
+    let vaccineRows=[
+      {id:'bcg-hepb-0m',接种月龄:'出生时',疫苗名称:'卡介苗 + 乙肝疫苗第1针',剂次:'各1剂',疫苗类型:'一类',间隔要求:'出生后尽早接种；乙肝第2针通常在满1月龄后接种，间隔≥28天'},
+      {id:'hepb-1m',接种月龄:'1月龄',疫苗名称:'乙肝疫苗第2针',剂次:'第2剂',疫苗类型:'一类',间隔要求:'与第1针间隔≥28天'},
+      {id:'hepb-6m',接种月龄:'6月龄',疫苗名称:'乙肝疫苗第3针',剂次:'第3剂',疫苗类型:'一类',间隔要求:'与第2针间隔≥60天；与第1针间隔≥180天'},
+      {id:'ipv-2m',接种月龄:'2月龄',疫苗名称:'脊髓灰质炎疫苗第1剂',剂次:'第1剂',疫苗类型:'一类',间隔要求:'通常与后续剂次间隔≥28天'},
+      {id:'ipv-3m',接种月龄:'3月龄',疫苗名称:'脊髓灰质炎疫苗第2剂',剂次:'第2剂',疫苗类型:'一类',间隔要求:'与第1剂间隔≥28天'},
+      {id:'dpt-3m',接种月龄:'3月龄',疫苗名称:'百白破疫苗第1剂',剂次:'第1剂',疫苗类型:'一类',间隔要求:'与第2剂、后续剂次通常间隔≥28天'},
+      {id:'dpt-4m',接种月龄:'4月龄',疫苗名称:'百白破疫苗第2剂',剂次:'第2剂',疫苗类型:'一类',间隔要求:'与第1剂间隔≥28天'},
+      {id:'ipv-4m',接种月龄:'4月龄',疫苗名称:'脊髓灰质炎疫苗第3剂',剂次:'第3剂',疫苗类型:'一类',间隔要求:'与前1剂间隔≥28天'},
+      {id:'dpt-5m',接种月龄:'5月龄',疫苗名称:'百白破疫苗第3剂',剂次:'第3剂',疫苗类型:'一类',间隔要求:'与第2剂间隔≥28天'},
+      {id:'hib-2m',接种月龄:'2月龄',疫苗名称:'b型流感嗜血杆菌结合疫苗(Hib)',剂次:'第1剂',疫苗类型:'二类',间隔要求:'通常按0、1、6月龄程序；不同厂家按说明书执行'},
+      {id:'hib-3m',接种月龄:'3月龄',疫苗名称:'b型流感嗜血杆菌结合疫苗(Hib)',剂次:'第2剂',疫苗类型:'二类',间隔要求:'与第1剂间隔≥28天'},
+      {id:'hib-6m',接种月龄:'6月龄',疫苗名称:'b型流感嗜血杆菌结合疫苗(Hib)',剂次:'第3剂',疫苗类型:'二类',间隔要求:'与第2剂间隔≥60天；与第1剂间隔≥6个月'},
+      {id:'measles-8m',接种月龄:'8月龄',疫苗名称:'麻疹-腮腺炎-风疹联合疫苗',剂次:'第1剂',疫苗类型:'一类',间隔要求:'满8月龄接种；与后续第2剂按程序间隔'},
+      {id:'je-8m',接种月龄:'8月龄',疫苗名称:'乙型脑炎疫苗',剂次:'第1剂',疫苗类型:'一类',间隔要求:'按程序通常在8月龄接种第1剂，后续剂次按要求完成'},
+      {id:'mena-9m',接种月龄:'9月龄',疫苗名称:'A群流脑疫苗',剂次:'第1剂',疫苗类型:'一类',间隔要求:'与第2剂间隔按程序执行，通常≥3个月'},
+      {id:'hepa-12m',接种月龄:'12月龄',疫苗名称:'甲型肝炎灭活疫苗',剂次:'第1剂',疫苗类型:'二类',间隔要求:'通常2剂程序，第二剂按说明书/门诊安排'},
+      {id:'varicella-12m',接种月龄:'12月龄',疫苗名称:'水痘疫苗',剂次:'第1剂',疫苗类型:'二类',间隔要求:'第2剂通常在3月龄后或按地区门诊安排'},
+      {id:'dpt-18m',接种月龄:'18月龄',疫苗名称:'百白破疫苗第4剂',剂次:'第4剂',疫苗类型:'一类',间隔要求:'与第3剂间隔通常≥6个月'},
+      {id:'je-2y',接种月龄:'2岁',疫苗名称:'乙型脑炎疫苗第2剂',剂次:'第2剂',疫苗类型:'一类',间隔要求:'与第1剂间隔按程序执行'},
+      {id:'flu-2y',接种月龄:'2岁',疫苗名称:'流感疫苗',剂次:'年度接种',疫苗类型:'二类',间隔要求:'流感季节按年度接种；首免儿童通常需2剂，间隔≥4周'},
+      {id:'mena-3y',接种月龄:'3岁',疫苗名称:'A群流脑疫苗第2剂',剂次:'第2剂',疫苗类型:'一类',间隔要求:'与第1剂间隔通常≥3个月'},
+      {id:'ipv-4y',接种月龄:'4岁',疫苗名称:'脊髓灰质炎疫苗加强针',剂次:'加强1剂',疫苗类型:'一类',间隔要求:'与前序基础免疫完成后按程序接种'},
+      {id:'dt-6y',接种月龄:'6岁',疫苗名称:'白破疫苗加强针',剂次:'加强1剂',疫苗类型:'一类',间隔要求:'与前序百白破程序完成后按程序接种'}
+    ];
+    async function loadData(){try{const res=await fetch('./vaccine.json',{cache:'no-store'});if(!res.ok) throw new Error('bad response');const data=await res.json();if(Array.isArray(data)&&data.length) vaccineRows=data}catch(e){/* fallback to inline data for file:// */}}
+    function buildTable(birth){const today=new Date();today.setHours(0,0,0,0);const ageMonths=getAgeMonths(birth,today);const rows=[...vaccineRows].sort((a,b)=>a.id.localeCompare(b.id,'zh-CN'));tableBody.innerHTML=rows.map(item=>{const match=item.接种月龄.match(/(\d+)/);const months=match?Number(match[1]):0;const target=addDays(birth,months*30);target.setHours(0,0,0,0);const status=statusForDate(target,today);const typeClass=item.疫苗类型==='一类'?'type1':'type2';return `<tr><td>${item.接种月龄}</td><td>${item.疫苗名称}</td><td><span class="tag ${typeClass}">${item.疫苗类型}</span></td><td>${formatDisplay(target)}</td><td><span class="tag ${status.cls}">${status.text}</span></td></tr>`}).join('');summary.hidden=false;todayText.textContent=formatDisplay(today);ageText.textContent=`${ageMonths}个月`;const nextItem=rows.find(item=>{const match=item.接种月龄.match(/(\d+)/);const months=match?Number(match[1]):0;return addDays(birth,months*30)>=today})||rows[rows.length-1];nextText.textContent=nextItem.接种月龄;remindText.textContent=ageMonths<12?'重点关注月龄接种':'按门诊安排'}
+    function render(){const value=birthInput.value;if(!value){summary.hidden=true;tableBody.innerHTML='<tr><td colspan="5"><div class="empty">请选择宝宝出生日期后生成时间表。</div></td></tr>';return}buildTable(new Date(value+'T00:00:00'))}
+    birthInput.addEventListener('change',render);birthInput.addEventListener('input',render);const defaultDate=new Date();defaultDate.setMonth(defaultDate.getMonth()-1);birthInput.value=formatDate(defaultDate);loadData().then(render);
+  </script>
+</body>
+</html>
