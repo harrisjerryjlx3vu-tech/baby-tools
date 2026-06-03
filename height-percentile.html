@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="./growth.html" />
+  <meta http-equiv="refresh" content="0; url=./growth.html" />
+  <title>儿童生长发育查询</title>
+  <script>
+    window.location.replace('./growth.html');
+  </script>
+</head>
+<body>
+  <p>正在跳转到儿童生长发育查询页面… <a href="growth.html">点击这里继续</a></p>
+  <script>
+    const homeScrollKey = 'baby-tools-home-scroll-y';
+    document.querySelectorAll('a.back[href="index.html"]').forEach(link => {
+      link.addEventListener('click', () => {
+        sessionStorage.setItem(homeScrollKey, String(sessionStorage.getItem(homeScrollKey) || 0));
+      });
+    });
+  </script>
+</body>
+</html>

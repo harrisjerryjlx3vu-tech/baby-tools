@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="宝宝睡眠参考计算器，输入0到36个月宝宝月龄，自动查看推荐全天总睡眠时长、日间小睡次数和夜间睡眠时长，适合家长日常参考。" />
+  <meta name="keywords" content="宝宝睡眠参考,宝宝睡眠时长,宝宝小睡次数,宝宝睡眠月龄,婴儿睡眠,儿童睡眠规律" />
+  <meta name="theme-color" content="#8fb8ff" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="./sleep.html" />
+  <meta property="og:site_name" content="母婴育儿小工具站" />
+  <meta property="og:title" content="宝宝睡眠参考计算器" />
+  <meta property="og:description" content="输入宝宝月龄，快速查看全天总睡眠时长、日间小睡次数、夜间睡眠时长和清醒间隔参考。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="./sleep.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>宝宝睡眠参考计算器</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4573157416126348"
+     crossorigin="anonymous"></script>
+  <style>
+    :root{--bg:#f6f9ff;--card:rgba(255,255,255,.94);--text:#203047;--muted:#6d7b90;--primary:#5b8def;--primary-2:#7fc8f8;--border:rgba(91,141,239,.12);--shadow:0 12px 32px rgba(54,79,128,.08);--radius:20px;--warn:#c58b18;--success:#1f9d63;--danger:#d15b5b}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(127,200,248,.18),transparent 35%),radial-gradient(circle at top right,rgba(91,141,239,.14),transparent 30%),var(--bg);line-height:1.6}a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 32px));margin:0 auto}header{padding:22px 0 10px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}.back{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.85);box-shadow:var(--shadow);color:#466089;font-size:13px;font-weight:700;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.back:hover{transform:translateY(-1px);box-shadow:0 14px 24px rgba(54,79,128,.08);background:#fff}.hero{background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(255,255,255,.74));border:1px solid var(--border);box-shadow:var(--shadow);border-radius:28px;padding:26px 22px;backdrop-filter:blur(12px)}.badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--primary);background:rgba(91,141,239,.08);border:1px solid rgba(91,141,239,.12);padding:7px 12px;border-radius:999px;margin-bottom:14px}h1{margin:0 0 10px;font-size:clamp(26px,5vw,38px);line-height:1.15;letter-spacing:-.02em}.lead{margin:0;color:var(--muted);font-size:15px;max-width:780px}main{padding:18px 0 44px}.layout{display:grid;grid-template-columns:340px minmax(0,1fr);gap:18px;align-items:start}.panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}.panel-hd{padding:18px 18px 0}.panel-bd{padding:18px}h2{margin:0 0 12px;font-size:18px}label{display:block;margin-bottom:8px;font-size:14px;font-weight:600}input[type="range"]{width:100%}.slider{padding:16px;border-radius:18px;background:linear-gradient(180deg,rgba(91,141,239,.06),rgba(127,200,248,.08));border:1px solid rgba(91,141,239,.1)}.range-row{display:flex;justify-content:space-between;gap:10px;align-items:center;color:var(--muted);font-size:13px;margin-top:8px}.summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}.stat{padding:14px;border-radius:16px;background:linear-gradient(180deg,rgba(91,141,239,.06),rgba(127,200,248,.08));border:1px solid rgba(91,141,239,.1)}.stat .k{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}.stat .v{font-size:18px;font-weight:700}.block{padding:16px;border-radius:18px;background:#fff;border:1px solid rgba(91,141,239,.1);margin-bottom:14px}.block h3{margin:0 0 10px;font-size:16px}.rows{display:grid;gap:10px}.row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:11px 12px;border-radius:14px;background:rgba(91,141,239,.05)}.row span{font-size:14px}.row strong{font-size:14px;color:#2f4b7c}.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{display:inline-flex;padding:6px 10px;border-radius:999px;background:rgba(91,141,239,.06);border:1px solid rgba(91,141,239,.1);font-size:12px;color:#466089;font-weight:700}.tip{display:flex;gap:10px;padding:12px 14px;border-radius:16px;background:rgba(31,157,99,.06);border:1px solid rgba(31,157,99,.12);color:#2d6e50;font-size:13px}.warn{margin-top:12px;padding:14px 16px;border-radius:16px;background:rgba(209,91,91,.06);border:1px solid rgba(209,91,91,.12);color:#7f3e3e;font-size:13px}.footer-nav{position:sticky;bottom:0;z-index:20;padding:10px 0 calc(10px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(246,249,255,.2),rgba(246,249,255,.94) 24%,rgba(246,249,255,.98));backdrop-filter:blur(18px);border-top:1px solid rgba(91,141,239,.10);box-shadow:0 -10px 24px rgba(54,79,128,.05)}.footer-nav-inner{width:min(1120px,calc(100% - 32px));margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.footer-nav a{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 10px;border-radius:18px;color:#466089;font-size:13px;font-weight:700;background:rgba(255,255,255,.86);border:1px solid rgba(91,141,239,.10);box-shadow:0 10px 20px rgba(54,79,128,.05);transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.footer-nav a:hover{transform:translateY(-2px);box-shadow:0 14px 24px rgba(54,79,128,.08);background:#fff}.footer-nav a.active{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-color:transparent;box-shadow:0 12px 24px rgba(91,141,239,.18)}.nav-ic{font-size:18px;line-height:1}.nav-txt{font-size:12px;line-height:1}.nav-sub{font-size:10px;opacity:.8}.footer-nav a.active .nav-sub{opacity:.92}footer{padding:10px 0 18px;color:var(--muted);font-size:13px;text-align:center}@media (max-width:960px){.layout,.summary{grid-template-columns:1fr}}@media (max-width:640px){.container,.footer-nav-inner{width:min(100% - 20px,1120px)}.hero{padding:22px 16px;border-radius:22px}.panel-bd{padding:16px}.footer-nav-inner{gap:8px}.footer-nav a{padding:10px 6px;border-radius:16px}.nav-ic{font-size:17px}.nav-txt{font-size:11px}}</style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "宝宝睡眠参考计算器",
+    "url": "./sleep.html",
+    "description": "输入宝宝月龄即可查看推荐全天总睡眠时长、日间小睡次数和夜间睡眠时长参考。",
+    "inLanguage": "zh-CN",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "母婴育儿小工具站",
+      "url": "./index.html"
+    },
+    "mainEntity": {
+      "@type": "SoftwareApplication",
+      "name": "宝宝睡眠参考计算器",
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "Web",
+      "description": "宝宝月龄睡眠参考工具，提供全天总睡眠、午睡次数、夜间睡眠和清醒间隔建议。"
+    },
+    "potentialAction": {
+      "@type": "ReadAction",
+      "target": "./sleep.html"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "宝宝睡眠时长会不会每天都一样？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "不会。睡眠会受月龄、喂养、活动量、环境和生病等因素影响，本工具提供的是常见参考范围。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "清醒间隔是什么意思？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "清醒间隔是指两次睡眠之间，宝宝清醒活动的大致时间。月龄越大，清醒间隔通常越长。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "如果宝宝睡得比参考少怎么办？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "先观察宝宝精神状态、喂养情况和是否处于出牙或生病阶段；若长期明显偏离参考范围，建议咨询儿科医生。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="topbar"><a class="back" href="index.html">返回首页</a></div>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="badge">宝宝睡眠 · 月龄参考</div>
+        <h1 id="page-title">宝宝睡眠参考计算器</h1>
+        <p class="lead">输入 0 到 36 个月的宝宝月龄，快速查看推荐全天总睡眠时长、日间小睡次数、夜间睡眠时长和清醒间隔参考，帮助家长更好安排作息。</p>
+      </section>
+    </div>
+  </header>
+  <main class="container">
+    <div class="layout">
+      <section class="panel" aria-labelledby="form-title">
+        <div class="panel-hd"><h2 id="form-title">月龄选择</h2></div>
+        <div class="panel-bd">
+          <div class="slider">
+            <label for="ageRange">宝宝月龄：<strong id="ageLabel">0个月</strong></label>
+            <input id="ageRange" type="range" min="0" max="36" step="1" value="0" />
+            <div class="range-row"><span>0个月</span><span>36个月</span></div>
+          </div>
+          <div class="tip" style="margin-top:14px;">💡 睡眠需求会随月龄快速变化，本工具采用儿科通用睡眠参考范围，用于家庭日常作息安排。</div>
+          <div class="tip" style="margin-top:10px;">🕒 若宝宝持续明显夜醒、睡眠过少或过多，建议结合喂养、环境与医生建议综合判断。</div>
+        </div>
+      </section>
+      <section class="panel" aria-labelledby="result-title">
+        <div class="panel-hd"><h2 id="result-title">睡眠结果</h2></div>
+        <div class="panel-bd">
+          <div class="summary">
+            <div class="stat"><span class="k">月龄</span><span class="v" id="monthText">0个月</span></div>
+            <div class="stat"><span class="k">全天总睡眠</span><span class="v" id="totalText">-</span></div>
+            <div class="stat"><span class="k">日间小睡</span><span class="v" id="napText">-</span></div>
+            <div class="stat"><span class="k">夜间睡眠</span><span class="v" id="nightText">-</span></div>
+          </div>
+          <div class="block">
+            <h3>详细参考</h3>
+            <div class="rows">
+              <div class="row"><span>推荐全天总睡眠时长</span><strong id="detailTotal">-</strong></div>
+              <div class="row"><span>日间小睡次数 / 时长</span><strong id="detailNap">-</strong></div>
+              <div class="row"><span>夜间睡眠时长</span><strong id="detailNight">-</strong></div>
+              <div class="row"><span>清醒间隔参考</span><strong id="wakeText">-</strong></div>
+            </div>
+          </div>
+          <div class="block">
+            <h3>睡眠建议</h3>
+            <div class="chips" id="chips"></div>
+          </div>
+          <div class="block">
+            <h3>月龄睡眠表可视化说明</h3>
+            <div class="rows">
+              <div class="row"><span>0–3个月</span><strong>总睡眠最高，白天夜间都较碎片化</strong></div>
+              <div class="row"><span>4–12个月</span><strong>逐步建立昼夜节律，小睡次数开始减少</strong></div>
+              <div class="row"><span>13–24个月</span><strong>通常过渡到 1–2 次午睡，夜间更稳定</strong></div>
+              <div class="row"><span>25–36个月</span><strong>接近大孩子作息，午睡可减少但仍常见</strong></div>
+            </div>
+            <div class="tip" style="margin-top:12px;">图表说明：本页将月龄分为 7 个常见睡眠阶段，卡片中的总睡眠、小睡、夜间睡眠和清醒间隔均来自儿科通用参考区间，家长可按月龄快速定位当前阶段。</div>
+          </div>
+          <div class="block">
+            <h3>科普说明</h3>
+            <div class="tip" id="explainText">-</div>
+            <div class="warn">说明：睡眠参考来自常见儿科通用范围，不同宝宝存在个体差异，尤其在出牙、生病、作息调整期，睡眠可能短期波动。</div>
+          </div>
+
+          <div class="block">
+            <h3>FAQ</h3>
+            <div class="rows">
+              <div class="row"><span>宝宝睡眠时长每天都固定吗？</span><strong>不会，通常会随月龄和状态变化</strong></div>
+              <div class="row"><span>清醒间隔是什么意思？</span><strong>指两次睡眠之间可清醒活动的参考时长</strong></div>
+              <div class="row"><span>睡眠少一点正常吗？</span><strong>若精神状态好且短期波动，通常可先观察</strong></div>
+              <div class="row"><span>什么时候需要咨询医生？</span><strong>长期明显偏离参考范围或伴随异常症状时建议就医</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer><div class="container">© 2026 母婴育儿小工具站 · 简洁、安全，体验友好</div></footer>
+  <script>
+    const ageRange=document.getElementById('ageRange');
+    const ageLabel=document.getElementById('ageLabel');
+    const monthText=document.getElementById('monthText');
+    const totalText=document.getElementById('totalText');
+    const napText=document.getElementById('napText');
+    const nightText=document.getElementById('nightText');
+    const detailTotal=document.getElementById('detailTotal');
+    const detailNap=document.getElementById('detailNap');
+    const detailNight=document.getElementById('detailNight');
+    const wakeText=document.getElementById('wakeText');
+    const chips=document.getElementById('chips');
+    const explainText=document.getElementById('explainText');
+
+    const data=[
+      {min:0,max:3,total:'14–17 小时',nap:'4–6 次 / 每次 30–90 分钟',night:'8–10 小时',wake:'45–60 分钟',tips:['新生儿睡眠碎片化较多','白天夜间睡眠都较长','按需喂养更重要']},
+      {min:4,max:6,total:'12–15 小时',nap:'3–4 次 / 每次 30–120 分钟',night:'10–12 小时',wake:'1.5–2 小时',tips:['开始建立更规律昼夜节律','晚间可逐步形成固定入睡流程','白天小睡仍较重要']},
+      {min:7,max:9,total:'12–15 小时',nap:'2–3 次 / 每次 30–120 分钟',night:'10–12 小时',wake:'2–2.5 小时',tips:['可逐渐减少小睡次数','避免过度疲劳影响入睡','睡前仪式感有帮助']},
+      {min:10,max:12,total:'11–14 小时',nap:'2 次 / 每次 30–90 分钟',night:'10–12 小时',wake:'2.5–3 小时',tips:['多在固定时间午睡','白天活动量增加','夜间睡眠更稳定']},
+      {min:13,max:18,total:'11–14 小时',nap:'1–2 次 / 每次 60–120 分钟',night:'10–12 小时',wake:'3–4 小时',tips:['多数宝宝逐步过渡到 1 次午睡','午后别太晚睡','注意昼夜作息规律']},
+      {min:19,max:24,total:'11–14 小时',nap:'1 次 / 每次 60–120 分钟',night:'10–12 小时',wake:'4–5 小时',tips:['白天活动更丰富','午睡时长可能变化','夜醒减少是常见趋势']},
+      {min:25,max:36,total:'10–13 小时',nap:'1 次或不固定 / 60–90 分钟',night:'10–12 小时',wake:'5–6 小时',tips:['多数宝宝接近大孩子作息','午睡可能逐步减少','保持固定睡前流程更重要']}
+    ];
+
+    const fmt=(v)=>v;
+    function findBlock(m){return data.find(x=>m>=x.min&&m<=x.max)||data[data.length-1]}
+    function render(){
+      const m=Number(ageRange.value);
+      const b=findBlock(m);
+      ageLabel.textContent=`${m}个月`;
+      monthText.textContent=`${m}个月`;
+      totalText.textContent=b.total;
+      napText.textContent=b.nap;
+      nightText.textContent=b.night;
+      detailTotal.textContent=b.total;
+      detailNap.textContent=b.nap;
+      detailNight.textContent=b.night;
+      wakeText.textContent=b.wake;
+      chips.innerHTML=[...b.tips,`清醒间隔：${b.wake}`].map(t=>`<span class="chip">${t}</span>`).join('');
+      explainText.textContent=`${m}个月宝宝通常推荐全天总睡眠为 ${b.total}，日间小睡 ${b.nap}，夜间睡眠 ${b.night}，清醒间隔参考 ${b.wake}。家长可结合喂奶、活动量和宝宝精神状态灵活调整。`;
+    }
+    ageRange.addEventListener('input',render);
+    render();
+  </script>
+  <script>
+    const homeScrollKey = 'baby-tools-home-scroll-y';
+    document.querySelectorAll('a.back[href="index.html"]').forEach(link => {
+      link.addEventListener('click', () => {
+        sessionStorage.setItem(homeScrollKey, String(sessionStorage.getItem(homeScrollKey) || 0));
+      });
+    });
+  </script>
+</body>
+</html>

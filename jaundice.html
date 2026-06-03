@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="新生儿黄疸查询工具，输入宝宝出生天数、足月或早产类型以及血清黄疸值，自动判断正常、临界偏高或病理性偏高，并提供简单护理提示。" />
+  <meta name="keywords" content="新生儿黄疸查询,黄疸值,足月儿黄疸,早产儿黄疸,新生儿护理,血清胆红素" />
+  <meta name="theme-color" content="#8fb8ff" />
+  <link rel="canonical" href="./jaundice.html" />
+  <meta property="og:site_name" content="母婴育儿小工具站" />
+  <meta property="og:title" content="新生儿黄疸查询 - 足月/早产参考阈值判断" />
+  <meta property="og:description" content="输入出生天数、足月/早产与血清黄疸值，自动判断新生儿黄疸风险并给出护理提示。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="./jaundice.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>新生儿黄疸查询</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4573157416126348"
+     crossorigin="anonymous"></script>
+  <style>
+    :root{--bg:#f6f9ff;--card:rgba(255,255,255,.94);--text:#203047;--muted:#6d7b90;--primary:#5b8def;--primary-2:#7fc8f8;--success:#1f9d63;--warning:#c58b18;--danger:#d15b5b;--border:rgba(91,141,239,.12);--shadow:0 12px 32px rgba(54,79,128,.08);--radius:20px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(127,200,248,.18),transparent 35%),radial-gradient(circle at top right,rgba(91,141,239,.14),transparent 30%),var(--bg);line-height:1.6}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 32px));margin:0 auto}header{padding:22px 0 10px}.topbar{display:flex;justify-content:flex-start;align-items:center;gap:12px;margin-bottom:14px}.back{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.85);box-shadow:var(--shadow);color:#466089;font-size:13px;font-weight:700;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.back:hover{transform:translateY(-1px);box-shadow:0 14px 24px rgba(54,79,128,.08);background:#fff}.hero{background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(255,255,255,.74));border:1px solid var(--border);box-shadow:var(--shadow);border-radius:28px;padding:26px 22px;backdrop-filter:blur(12px)}.badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--primary);background:rgba(91,141,239,.08);border:1px solid rgba(91,141,239,.12);padding:7px 12px;border-radius:999px;margin-bottom:14px}h1{margin:0 0 10px;font-size:clamp(26px,5vw,38px);line-height:1.15;letter-spacing:-.02em}.lead{margin:0;color:var(--muted);font-size:15px;max-width:780px}main{padding:16px 0 56px}.layout{display:grid;grid-template-columns:340px minmax(0,1fr);gap:18px;align-items:start}.panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}.panel-hd{padding:18px 18px 0}.panel-bd{padding:18px}h2{margin:0 0 12px;font-size:18px}label{display:block;margin-bottom:8px;font-size:14px;font-weight:600}input,select{width:100%;border:1px solid rgba(91,141,239,.18);border-radius:14px;padding:13px 14px;font-size:15px;background:#fff;color:var(--text);outline:none}input:focus,select:focus{border-color:rgba(91,141,239,.5);box-shadow:0 0 0 4px rgba(91,141,239,.12)}.radio-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.chip{display:flex;align-items:center;justify-content:center;padding:12px;border-radius:14px;border:1px solid rgba(91,141,239,.16);background:#fff;font-weight:700;cursor:pointer}.chip.active{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-color:transparent}.tip{display:flex;gap:10px;padding:12px 14px;border-radius:16px;background:rgba(91,141,239,.06);color:#35507f;font-size:13px;margin-top:10px}.summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}.stat{padding:14px;border-radius:16px;background:linear-gradient(180deg,rgba(91,141,239,.06),rgba(127,200,248,.08));border:1px solid rgba(91,141,239,.1)}.stat .k{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}.stat .v{font-size:18px;font-weight:700}.blocks{display:grid;gap:14px}.block{padding:16px;border-radius:18px;background:#fff;border:1px solid rgba(91,141,239,.1)}.block h3{margin:0 0 10px;font-size:16px}.rows{display:grid;gap:10px}.row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:11px 12px;border-radius:14px;background:rgba(91,141,239,.05)}.row span{font-size:14px}.row strong{font-size:14px;color:#2f4b7c}.tag{display:inline-flex;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap}.status-normal{background:rgba(31,157,99,.1);color:var(--success)}.status-borderline{background:rgba(197,139,24,.12);color:var(--warning)}.status-high{background:rgba(209,91,91,.1);color:var(--danger)}.explain{padding:14px 16px;border-radius:16px;background:rgba(91,141,239,.06);border:1px solid rgba(91,141,239,.1);color:#35507f;font-size:13px}.care{display:grid;gap:10px}.care-item{padding:12px 14px;border-radius:14px;background:#fff;border:1px solid rgba(91,141,239,.1)}.care-item strong{display:block;margin-bottom:4px}.care-item span{color:var(--muted);font-size:14px}.disclaimer{margin-top:14px;padding:14px 16px;border-radius:16px;background:rgba(209,91,91,.06);border:1px solid rgba(209,91,91,.12);color:#7f3e3e;font-size:13px}.footer-nav{position:sticky;bottom:0;z-index:20;padding:10px 0 calc(10px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(246,249,255,.2),rgba(246,249,255,.94) 24%,rgba(246,249,255,.98));backdrop-filter:blur(18px);border-top:1px solid rgba(91,141,239,.10);box-shadow:0 -10px 24px rgba(54,79,128,.05)}.footer-nav-inner{width:min(1120px,calc(100% - 32px));margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.footer-nav a{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 10px;border-radius:18px;color:#466089;font-size:13px;font-weight:700;background:rgba(255,255,255,.86);border:1px solid rgba(91,141,239,.10);box-shadow:0 10px 20px rgba(54,79,128,.05);transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.footer-nav a:hover{transform:translateY(-2px);box-shadow:0 14px 24px rgba(54,79,128,.08);background:#fff}.footer-nav a.active{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-color:transparent;box-shadow:0 12px 24px rgba(91,141,239,.18)}.nav-ic{font-size:18px;line-height:1}.nav-txt{font-size:12px;line-height:1}.nav-sub{font-size:10px;opacity:.8}.footer-nav a.active .nav-sub{opacity:.92}footer{padding:10px 0 18px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:960px){.layout,.summary{grid-template-columns:1fr}}@media (max-width:640px){.container,.footer-nav-inner{width:min(100% - 20px,1120px)}header{padding-top:14px}.hero{padding:22px 16px;border-radius:22px}.panel-bd{padding:16px}.footer-nav-inner{gap:8px}.footer-nav a{padding:10px 6px;border-radius:16px}.nav-ic{font-size:17px}.nav-txt{font-size:11px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="topbar"><a class="back" href="index.html">← 返回首页</a></div>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="badge">新生儿黄疸 · 日龄阈值判断</div>
+        <h1 id="page-title">新生儿黄疸查询</h1>
+        <p class="lead">输入宝宝出生天数、足月/早产选项和血清黄疸值，自动匹配常见参考阈值，判断是否需要进一步关注。</p>
+      </section>
+    </div>
+  </header>
+  <main class="container">
+    <div class="layout">
+      <section class="panel" aria-labelledby="form-title">
+        <div class="panel-hd"><h2 id="form-title">填写信息</h2></div>
+        <div class="panel-bd">
+          <div class="form-group" style="margin-bottom:14px;">
+            <label for="ageDays">宝宝出生天数</label>
+            <input id="ageDays" type="number" min="0" max="60" step="1" value="3" />
+          </div>
+          <div class="form-group" style="margin-bottom:14px;">
+            <label>宝宝类型</label>
+            <div class="radio-row">
+              <button class="chip active" type="button" data-type="term">足月儿</button>
+              <button class="chip" type="button" data-type="preterm">早产儿</button>
+            </div>
+          </div>
+          <div class="form-group" style="margin-bottom:14px;">
+            <label for="biliValue">血清黄疸值（μmol/L）</label>
+            <input id="biliValue" type="number" min="0" max="500" step="1" value="180" />
+          </div>
+          <div class="tip"><div>📌</div><div><strong>参考范围</strong>不同日龄、足月/早产儿的黄疸阈值不同，以下为常见临床参考值，仅做初步筛查。</div></div>
+          <div class="tip"><div>🩺</div><div><strong>结果仅供参考</strong>若黄疸迅速加重、吃奶差、精神反应差或伴发热，请及时就医。</div></div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="result-title">
+        <div class="panel-hd"><h2 id="result-title">判断结果</h2></div>
+        <div class="panel-bd">
+          <div class="summary" id="summary" hidden>
+            <div class="stat"><span class="k">当前判定</span><span class="v" id="statusText">-</span></div>
+            <div class="stat"><span class="k">参考阈值</span><span class="v" id="thresholdText">-</span></div>
+            <div class="stat"><span class="k">建议</span><span class="v" id="adviceText">-</span></div>
+          </div>
+
+          <div class="blocks">
+            <div class="block">
+              <h3>基础信息</h3>
+              <div class="rows">
+                <div class="row"><span>出生天数</span><strong id="ageDisplay">-</strong></div>
+                <div class="row"><span>宝宝类型</span><strong id="typeDisplay">-</strong></div>
+                <div class="row"><span>血清黄疸值</span><strong id="biliDisplay">-</strong></div>
+                <div class="row"><span>判定阈值</span><strong id="limitDisplay">-</strong></div>
+              </div>
+            </div>
+
+            <div class="block">
+              <h3>护理提示</h3>
+              <div class="care" id="careList"></div>
+            </div>
+
+            <div class="block">
+              <h3>说明</h3>
+              <div class="explain" id="explainText">-</div>
+            </div>
+          </div>
+
+          <p class="disclaimer">免责声明：本工具仅用于新生儿黄疸日常参考，不替代医生诊断；如黄疸值明显升高或宝宝出现异常表现，请尽快就医。</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <nav class="footer-nav" aria-label="底部导航">
+    <div class="footer-nav-inner">
+      <a href="index.html"><span class="nav-ic">🏠</span><span class="nav-txt">首页</span><span class="nav-sub">Home</span></a>
+      <a href="food.html"><span class="nav-ic">🥣</span><span class="nav-txt">辅食</span><span class="nav-sub">Food</span></a>
+      <a href="growth.html"><span class="nav-ic">📈</span><span class="nav-txt">身高</span><span class="nav-sub">Growth</span></a>
+      <a href="vaccine.html"><span class="nav-ic">💉</span><span class="nav-txt">疫苗</span><span class="nav-sub">Vaccine</span></a>
+      <a class="active" href="jaundice.html"><span class="nav-ic">🟡</span><span class="nav-txt">黄疸</span><span class="nav-sub">Jaundice</span></a>
+    </div>
+  </nav>
+
+  <footer><div class="container">© 2026 母婴育儿小工具站 · 简洁、安全，体验友好</div></footer>
+
+  <script>
+    const ageDays = document.getElementById('ageDays');
+    const biliValue = document.getElementById('biliValue');
+    const typeButtons = [...document.querySelectorAll('.chip[data-type]')];
+    const summary = document.getElementById('summary');
+    const statusText = document.getElementById('statusText');
+    const thresholdText = document.getElementById('thresholdText');
+    const adviceText = document.getElementById('adviceText');
+    const ageDisplay = document.getElementById('ageDisplay');
+    const typeDisplay = document.getElementById('typeDisplay');
+    const biliDisplay = document.getElementById('biliDisplay');
+    const limitDisplay = document.getElementById('limitDisplay');
+    const careList = document.getElementById('careList');
+    const explainText = document.getElementById('explainText');
+
+    const THRESHOLDS = {
+      term: [
+        { maxDay: 1, normal: 85, borderline: 205 },
+        { maxDay: 2, normal: 120, borderline: 220 },
+        { maxDay: 3, normal: 140, borderline: 250 },
+        { maxDay: 5, normal: 160, borderline: 260 },
+        { maxDay: 7, normal: 180, borderline: 280 },
+        { maxDay: 14, normal: 200, borderline: 300 },
+        { maxDay: 60, normal: 220, borderline: 320 }
+      ],
+      preterm: [
+        { maxDay: 1, normal: 95, borderline: 180 },
+        { maxDay: 2, normal: 130, borderline: 220 },
+        { maxDay: 3, normal: 150, borderline: 240 },
+        { maxDay: 5, normal: 170, borderline: 260 },
+        { maxDay: 7, normal: 190, borderline: 280 },
+        { maxDay: 14, normal: 210, borderline: 300 },
+        { maxDay: 60, normal: 230, borderline: 320 }
+      ]
+    };
+
+    let currentType = 'term';
+
+    function getThreshold(days, type) {
+      const rows = THRESHOLDS[type];
+      return rows.find(row => days <= row.maxDay) || rows[rows.length - 1];
+    }
+
+    function renderCare(status) {
+      const items = status === '正常'
+        ? [
+            ['继续观察', '保持规律喂养和排便观察，关注黄疸变化。'],
+            ['多晒散射光', '可在医生允许下进行短时、避风的室内自然光接触。'],
+            ['及时复测', '若黄疸上升或宝宝精神变差，建议复查。']
+          ]
+        : status === '临界偏高'
+          ? [
+              ['增加观察频率', '建议更频繁关注皮肤颜色、吃奶和尿便情况。'],
+              ['按时复查', '可根据门诊建议复测黄疸值，观察是否继续上升。'],
+              ['避免拖延', '如果数值接近病理性阈值，请尽快咨询医生。']
+            ]
+          : [
+              ['尽快就医', '病理性偏高通常需要医生评估是否治疗。'],
+              ['关注精神状态', '若伴吃奶差、嗜睡、尖叫或发热，应立即就医。'],
+              ['不要仅靠观察', '单靠居家护理无法替代专业检查和处理。']
+            ];
+      careList.innerHTML = items.map(([title, text]) => `<div class="care-item"><strong>${title}</strong><span>${text}</span></div>`).join('');
+    }
+
+    function evaluate() {
+      const days = Math.max(0, Math.min(60, Number(ageDays.value) || 0));
+      const value = Math.max(0, Number(biliValue.value) || 0);
+      const threshold = getThreshold(days, currentType);
+      const status = value <= threshold.normal ? '正常' : (value <= threshold.borderline ? '临界偏高' : '病理性偏高');
+      const tagClass = status === '正常' ? 'status-normal' : (status === '临界偏高' ? 'status-borderline' : 'status-high');
+
+      summary.hidden = false;
+      statusText.innerHTML = `<span class="tag ${tagClass}">${status}</span>`;
+      thresholdText.textContent = `正常 ≤ ${threshold.normal} / 临界 ≤ ${threshold.borderline}`;
+      adviceText.textContent = status === '正常' ? '日常观察' : (status === '临界偏高' ? '建议复查' : '尽快就医');
+      ageDisplay.textContent = `${days}天`;
+      typeDisplay.textContent = currentType === 'term' ? '足月儿' : '早产儿';
+      biliDisplay.textContent = `${value} μmol/L`;
+      limitDisplay.textContent = `正常 ≤ ${threshold.normal} μmol/L`;
+      renderCare(status);
+      explainText.textContent = currentType === 'term'
+        ? `足月儿按日龄匹配常见黄疸参考阈值：出生后前几天阈值相对较低，随后逐渐放宽。当前按 ${days} 天龄参考，建议重点观察黄疸是否持续升高。`
+        : `早产儿由于肝脏代谢能力和胆红素处理能力相对更弱，参考阈值通常更谨慎。当前按 ${days} 天龄参考，若数值接近或超过病理性范围，应及时就医。`;
+    }
+
+    typeButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        typeButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentType = btn.dataset.type;
+        evaluate();
+      });
+    });
+
+    ageDays.addEventListener('input', evaluate);
+    biliValue.addEventListener('input', evaluate);
+
+    evaluate();
+  </script>
+</body>
+</html>

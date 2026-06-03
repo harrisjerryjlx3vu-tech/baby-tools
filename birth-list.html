@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="待产打包清单页面，输入预产期后自动拆分入院孕妈用品、新生儿用品和证件资料清单，并支持勾选、删减和一键复制。" />
+  <meta name="keywords" content="待产清单,待产包,待产打包清单,入院用品,新生儿用品,证件资料,预产期" />
+  <meta name="theme-color" content="#8fb8ff" />
+  <link rel="canonical" href="./birth-list.html" />
+  <meta property="og:site_name" content="母婴育儿小工具站" />
+  <meta property="og:title" content="待产打包清单 - 按预产期拆分物品" />
+  <meta property="og:description" content="输入预产期后自动生成待产打包清单，支持勾选删减与一键复制。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="./birth-list.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>待产打包清单</title>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4573157416126348"
+     crossorigin="anonymous"></script>
+  <style>
+    :root{--bg:#f6f9ff;--card:rgba(255,255,255,.94);--text:#203047;--muted:#6d7b90;--primary:#5b8def;--primary-2:#7fc8f8;--success:#1f9d63;--warning:#c58b18;--danger:#d15b5b;--border:rgba(91,141,239,.12);--shadow:0 12px 32px rgba(54,79,128,.08);--radius:20px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;color:var(--text);background:radial-gradient(circle at top left,rgba(127,200,248,.18),transparent 35%),radial-gradient(circle at top right,rgba(91,141,239,.14),transparent 30%),var(--bg);line-height:1.6}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,calc(100% - 32px));margin:0 auto}header{padding:22px 0 10px}.topbar{display:flex;justify-content:flex-start;align-items:center;gap:12px;margin-bottom:14px}.back{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:14px;border:1px solid var(--border);background:rgba(255,255,255,.85);box-shadow:var(--shadow);color:#466089;font-size:13px;font-weight:700;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.back:hover{transform:translateY(-1px);box-shadow:0 14px 24px rgba(54,79,128,.08);background:#fff}.hero{background:linear-gradient(135deg,rgba(255,255,255,.92),rgba(255,255,255,.74));border:1px solid var(--border);box-shadow:var(--shadow);border-radius:28px;padding:26px 22px;backdrop-filter:blur(12px)}.badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--primary);background:rgba(91,141,239,.08);border:1px solid rgba(91,141,239,.12);padding:7px 12px;border-radius:999px;margin-bottom:14px}h1{margin:0 0 10px;font-size:clamp(26px,5vw,38px);line-height:1.15;letter-spacing:-.02em}.lead{margin:0;color:var(--muted);font-size:15px;max-width:780px}main{padding:16px 0 56px}.layout{display:grid;grid-template-columns:320px minmax(0,1fr);gap:18px;align-items:start}.panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}.panel-hd{padding:18px 18px 0}.panel-bd{padding:18px}h2{margin:0 0 12px;font-size:18px}label{display:block;margin-bottom:8px;font-size:14px;font-weight:600}input{width:100%;border:1px solid rgba(91,141,239,.18);border-radius:14px;padding:13px 14px;font-size:15px;background:#fff;color:var(--text);outline:none}input:focus{border-color:rgba(91,141,239,.5);box-shadow:0 0 0 4px rgba(91,141,239,.12)}.tip{display:flex;gap:10px;padding:12px 14px;border-radius:16px;background:rgba(91,141,239,.06);color:#35507f;font-size:13px;margin-top:10px}.summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:16px}.stat{padding:14px;border-radius:16px;background:linear-gradient(180deg,rgba(91,141,239,.06),rgba(127,200,248,.08));border:1px solid rgba(91,141,239,.1)}.stat .k{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}.stat .v{font-size:18px;font-weight:700}.toolbar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 14px;border-radius:14px;border:1px solid transparent;font-weight:700;font-size:14px;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.btn.primary{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;box-shadow:0 12px 24px rgba(91,141,239,.22)}.btn.ghost{background:rgba(255,255,255,.85);border-color:rgba(91,141,239,.12);color:#466089;box-shadow:0 10px 20px rgba(54,79,128,.05)}.btn:hover{transform:translateY(-1px)}.sections{display:grid;gap:14px}.section-card{padding:16px;border-radius:18px;background:#fff;border:1px solid rgba(91,141,239,.1)}.section-card h3{margin:0 0 10px;font-size:16px}.section-card .desc{margin:0 0 12px;color:var(--muted);font-size:13px}.checklist{display:grid;gap:10px}.item{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border-radius:14px;background:rgba(91,141,239,.05);border:1px solid rgba(91,141,239,.08)}.item input{width:auto;accent-color:var(--primary);margin-top:3px}.item label{margin:0;font-size:14px;font-weight:600;line-height:1.4;flex:1}.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.tag{display:inline-flex;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:700;white-space:nowrap}.must{background:rgba(209,91,91,.1);color:var(--danger)}.soon{background:rgba(197,139,24,.12);color:var(--warning)}.normal{background:rgba(31,157,99,.1);color:var(--success)}.disclaimer{margin-top:14px;padding:14px 16px;border-radius:16px;background:rgba(209,91,91,.06);border:1px solid rgba(209,91,91,.12);color:#7f3e3e;font-size:13px}.text-box{padding:14px 16px;border-radius:16px;background:rgba(91,141,239,.06);border:1px solid rgba(91,141,239,.1);color:#35507f;font-size:13px;white-space:pre-wrap}.footer-nav{position:sticky;bottom:0;z-index:20;padding:10px 0 calc(10px + env(safe-area-inset-bottom));background:linear-gradient(180deg,rgba(246,249,255,.2),rgba(246,249,255,.94) 24%,rgba(246,249,255,.98));backdrop-filter:blur(18px);border-top:1px solid rgba(91,141,239,.10);box-shadow:0 -10px 24px rgba(54,79,128,.05)}.footer-nav-inner{width:min(1120px,calc(100% - 32px));margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.footer-nav a{display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 10px;border-radius:18px;color:#466089;font-size:13px;font-weight:700;background:rgba(255,255,255,.86);border:1px solid rgba(91,141,239,.10);box-shadow:0 10px 20px rgba(54,79,128,.05);transition:transform .2s ease,box-shadow .2s ease,background .2s ease}.footer-nav a:hover{transform:translateY(-2px);box-shadow:0 14px 24px rgba(54,79,128,.08);background:#fff}.footer-nav a.active{background:linear-gradient(135deg,var(--primary),var(--primary-2));color:#fff;border-color:transparent;box-shadow:0 12px 24px rgba(91,141,239,.18)}.nav-ic{font-size:18px;line-height:1}.nav-txt{font-size:12px;line-height:1}.nav-sub{font-size:10px;opacity:.8}.footer-nav a.active .nav-sub{opacity:.92}footer{padding:10px 0 18px;color:var(--muted);font-size:13px;text-align:center}
+    @media (max-width:960px){.layout,.summary{grid-template-columns:1fr}}@media (max-width:640px){.container,.footer-nav-inner{width:min(100% - 20px,1120px)}header{padding-top:14px}.hero{padding:22px 16px;border-radius:22px}.panel-bd{padding:16px}.footer-nav-inner{gap:8px}.footer-nav a{padding:10px 6px;border-radius:16px}.nav-ic{font-size:17px}.nav-txt{font-size:11px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="topbar"><a class="back" href="index.html">← 返回首页</a></div>
+      <section class="hero" aria-labelledby="page-title">
+        <div class="badge">待产打包 · 分项清单</div>
+        <h1 id="page-title">待产打包清单</h1>
+        <p class="lead">输入预产期后，系统会自动拆分入院孕妈用品、新生儿用品和证件资料三大清单，并按临产临近程度标注优先级。</p>
+      </section>
+    </div>
+  </header>
+  <main class="container">
+    <div class="layout">
+      <section class="panel" aria-labelledby="form-title">
+        <div class="panel-hd"><h2 id="form-title">填写预产期</h2></div>
+        <div class="panel-bd">
+          <div class="form-group" style="margin-bottom:14px;">
+            <label for="dueDate">预产期日期</label>
+            <input id="dueDate" type="date" />
+          </div>
+          <div class="tip"><div>📦</div><div><strong>自动拆分</strong>会按待产包三大类整理清单，方便逐项勾选与删减。</div></div>
+          <div class="tip"><div>⏰</div><div><strong>优先级提示</strong>临近预产期时，系统会自动标注必备物品与可后置准备项。</div></div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="result-title">
+        <div class="panel-hd"><h2 id="result-title">待产清单</h2></div>
+        <div class="panel-bd">
+          <div class="summary" id="summary" hidden>
+            <div class="stat"><span class="k">剩余天数</span><span class="v" id="daysLeftText">-</span></div>
+            <div class="stat"><span class="k">当前优先级</span><span class="v" id="priorityText">-</span></div>
+            <div class="stat"><span class="k">已勾选</span><span class="v" id="selectedCountText">-</span></div>
+          </div>
+
+          <div class="toolbar">
+            <button class="btn primary" type="button" id="copyBtn">📋 一键复制清单</button>
+            <button class="btn ghost" type="button" id="resetBtn">↺ 恢复全部项目</button>
+          </div>
+
+          <div class="sections" id="sections"></div>
+
+          <div style="height:14px"></div>
+          <div class="text-box" id="copyPreview">请选择预产期后生成清单。</div>
+          <p class="disclaimer">免责声明：本工具仅作待产准备参考，具体入院要求、母婴用品与证件资料请以医院和当地要求为准。</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <nav class="footer-nav" aria-label="底部导航">
+    <div class="footer-nav-inner">
+      <a href="index.html"><span class="nav-ic">🏠</span><span class="nav-txt">首页</span><span class="nav-sub">Home</span></a>
+      <a href="preg-food.html"><span class="nav-ic">🍽️</span><span class="nav-txt">饮食</span><span class="nav-sub">Food</span></a>
+      <a href="due-date.html"><span class="nav-ic">🤰</span><span class="nav-txt">预产期</span><span class="nav-sub">Due Date</span></a>
+      <a class="active" href="birth-list.html"><span class="nav-ic">📦</span><span class="nav-txt">待产包</span><span class="nav-sub">Checklist</span></a>
+      <a href="vaccine.html"><span class="nav-ic">💉</span><span class="nav-txt">疫苗</span><span class="nav-sub">Vaccine</span></a>
+    </div>
+  </nav>
+
+  <footer><div class="container">© 2026 母婴育儿小工具站 · 简洁、安全，体验友好</div></footer>
+
+  <script>
+    const dueDate = document.getElementById('dueDate');
+    const summary = document.getElementById('summary');
+    const daysLeftText = document.getElementById('daysLeftText');
+    const priorityText = document.getElementById('priorityText');
+    const selectedCountText = document.getElementById('selectedCountText');
+    const sectionsEl = document.getElementById('sections');
+    const copyPreview = document.getElementById('copyPreview');
+    const copyBtn = document.getElementById('copyBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    const fmt = d => `${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日`;
+    const normalize = d => { const x = new Date(d); x.setHours(0,0,0,0); return x; };
+    const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
+
+    const baseData = [
+      {
+        id: 'mom',
+        title: '入院孕妈用品',
+        desc: '建议优先打包到待产包中，便于临产时快速出发。',
+        items: [
+          { id: 'mom-clothes', text: '哺乳睡衣/开衫睡衣', must: true },
+          { id: 'mom-underwear', text: '一次性内裤/产褥内裤', must: true },
+          { id: 'mom-pads', text: '产妇卫生巾/产褥垫', must: true },
+          { id: 'mom-tissue', text: '抽纸/湿巾', must: true },
+          { id: 'mom-watercup', text: '吸管杯/保温杯', must: false },
+          { id: 'mom-toiletries', text: '洗漱包（牙刷、毛巾、洗漱用品）', must: false },
+          { id: 'mom-slippers', text: '防滑拖鞋', must: false },
+          { id: 'mom-doc', text: '手机充电器/充电宝', must: false }
+        ]
+      },
+      {
+        id: 'baby',
+        title: '新生儿用品',
+        desc: '根据医院条件可适当减配，建议准备基础换洗与包被。',
+        items: [
+          { id: 'baby-bodysuit', text: '新生儿连体衣/和尚服', must: true },
+          { id: 'baby-diaper', text: 'NB号纸尿裤', must: true },
+          { id: 'baby-blanket', text: '包被/小毯子', must: true },
+          { id: 'baby-wipes', text: '婴儿湿巾/棉柔巾', must: true },
+          { id: 'baby-hat', text: '小帽子', must: false },
+          { id: 'baby-socks', text: '婴儿袜/手套', must: false },
+          { id: 'baby-bottle', text: '奶瓶/奶嘴', must: false },
+          { id: 'baby-milk', text: '备用奶粉（按需）', must: false }
+        ]
+      },
+      {
+        id: 'docs',
+        title: '证件资料',
+        desc: '建议单独放文件袋，避免临时遗漏。',
+        items: [
+          { id: 'doc-id', text: '夫妻双方身份证', must: true },
+          { id: 'doc-med', text: '医保卡/就诊卡', must: true },
+          { id: 'doc-maternal', text: '母子健康手册/产检资料', must: true },
+          { id: 'doc-photos', text: '建档资料/证件复印件', must: false },
+          { id: 'doc-money', text: '现金/银行卡', must: false },
+          { id: 'doc-phone', text: '紧急联系人信息', must: false }
+        ]
+      }
+    ];
+
+    let customData = structuredClone(baseData);
+    const state = new Map();
+
+    function priorityLevel(daysLeft) {
+      if (daysLeft <= 7) return { label: '必备', cls: 'must' };
+      if (daysLeft <= 14) return { label: '优先准备', cls: 'soon' };
+      return { label: '可分批准备', cls: 'normal' };
+    }
+
+    function initState() {
+      state.clear();
+      customData.forEach(section => section.items.forEach(item => state.set(item.id, true)));
+    }
+
+    function getSelectedText() {
+      const lines = [];
+      customData.forEach(section => {
+        const selected = section.items.filter(item => state.get(item.id));
+        if (!selected.length) return;
+        lines.push(section.title + '：');
+        selected.forEach(item => lines.push(`- ${item.text}`));
+        lines.push('');
+      });
+      return lines.join('\n').trim();
+    }
+
+    function render() {
+      const value = dueDate.value;
+      if (!value) {
+        summary.hidden = true;
+        sectionsEl.innerHTML = '';
+        copyPreview.textContent = '请选择预产期后生成清单。';
+        return;
+      }
+
+      const due = normalize(new Date(value + 'T00:00:00'));
+      const today = normalize(new Date());
+      const daysLeft = Math.max(0, Math.ceil((due - today) / 86400000));
+      const level = priorityLevel(daysLeft);
+      const selectedCount = [...state.values()].filter(Boolean).length;
+
+      summary.hidden = false;
+      daysLeftText.textContent = `${daysLeft}天`;
+      priorityText.innerHTML = `<span class="tag ${level.cls}">${level.label}</span>`;
+      selectedCountText.textContent = `${selectedCount}项`;
+
+      sectionsEl.innerHTML = customData.map(section => {
+        const itemsHtml = section.items.map(item => {
+          const checked = state.get(item.id) !== false;
+          const badge = item.must ? '<span class="tag must">必备</span>' : (daysLeft <= 14 ? '<span class="tag soon">建议提前</span>' : '<span class="tag normal">可后置</span>');
+          return `<div class="item"><input type="checkbox" data-id="${item.id}" ${checked ? 'checked' : ''} /><label for="${item.id}">${item.text}${item.must ? '（必备）' : ''}</label>${badge}</div>`;
+        }).join('');
+        return `<section class="section-card"><h3>${section.title}</h3><p class="desc">${section.desc}</p><div class="checklist">${itemsHtml}</div></section>`;
+      }).join('');
+
+      document.querySelectorAll('.item input[type="checkbox"]').forEach(box => {
+        box.addEventListener('change', () => {
+          state.set(box.dataset.id, box.checked);
+          render();
+        });
+      });
+
+      const text = getSelectedText();
+      copyPreview.textContent = text || '当前没有勾选的项目。';
+    }
+
+    async function copyText() {
+      const text = getSelectedText();
+      if (!text) return;
+      try {
+        await navigator.clipboard.writeText(text);
+        copyBtn.textContent = '✅ 已复制';
+        setTimeout(() => { copyBtn.textContent = '📋 一键复制清单'; }, 1500);
+      } catch {
+        copyBtn.textContent = '复制失败';
+        setTimeout(() => { copyBtn.textContent = '📋 一键复制清单'; }, 1500);
+      }
+    }
+
+    copyBtn.addEventListener('click', copyText);
+    resetBtn.addEventListener('click', () => {
+      initState();
+      render();
+    });
+    dueDate.addEventListener('input', render);
+    dueDate.addEventListener('change', render);
+
+    const defaultDate = new Date();
+    defaultDate.setDate(defaultDate.getDate() + 30);
+    dueDate.value = `${defaultDate.getFullYear()}-${String(defaultDate.getMonth()+1).padStart(2,'0')}-${String(defaultDate.getDate()).padStart(2,'0')}`;
+    initState();
+    render();
+  </script>
+</body>
+</html>
